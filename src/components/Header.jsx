@@ -2,6 +2,15 @@ import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import "../styles/style.css";
 
+// Get the elements
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+
+// Add an event listener to the toggle button
+menuToggle.addEventListener('click', function() {
+  navLinks.classList.toggle('active');
+});
+
 function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -39,7 +48,7 @@ function Header() {
           <nav className="navbar">
             <ul className="nav-links">
               <li><Link to="/">Home</Link></li>
-              <Link to="/shop"><li>Shop</li></Link>
+              <li><Link to="/shop">Shop</Link></li>
               <li><Link to="/vendors">Vendors</Link></li>
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/contact">Contact</Link></li>
