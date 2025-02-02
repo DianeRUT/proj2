@@ -1,15 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import "../styles/style.css";
 
-// Get the elements
-const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
-
-// Add an event listener to the toggle button
-menuToggle.addEventListener('click', function() {
-  navLinks.classList.toggle('active');
-});
 
 function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -17,7 +9,28 @@ function Header() {
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
-  
+  useEffect(() => {
+    // Get the elements after the component mounts
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    // Ensure the elements exist
+    if (menuToggle && navLinks) {
+      // Add an event listener to the toggle button
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
+
+       // Clean up the event listener on unmount
+       return () => {
+        menuToggle.removeEventListener('click', function() {
+          navLinks.classList.toggle('active');
+        });
+      };
+    }
+  }, []); // Empty dependency array ensures this runs only once
+
+
   return (
     <section className="header-section">
       <header className="header">

@@ -29,10 +29,7 @@ const newArrivals = [
 const vendors = [
   { name: "Santa Monica’s Store", location: "New York, NY", image: "store1.jpg" },
   { name: "Josh Doe’s Store", location: "New York, NY", image: "store2.jpg" },
-  { name: "Digital Good’s Store", location: "New York, NY", image: "store3.jpg" },
-  { name: "Jessica’s Store", location: "New York, NY", image: "store4.jpg" },
-  { name: "The Glass Store", location: "New York, NY", image: "store5.jpg" },
-  { name: "John Doe’s Store", location: "New York, NY", image: "store6.jpg" },
+  { name: "Digital Good’s Store", location: "New York, NY", image: "store3.jpg" }
 ];
 
 const whyChooseUs = [
