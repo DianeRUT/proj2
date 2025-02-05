@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import ShopPage from "./components/Shop";
 import Layout from "./components/Layout";
+import StoreListing from "./components/Store";
+import UsestateHook from "./components/Login";
 // import Content from "./components/Content";
 // import MainSection from "./components/MainContent";
 
@@ -16,6 +18,8 @@ function App() {
           </Route>
 
           <Route path="/shop" element={<ShopPage />} />
+          <Route path="/store" element={<StoreListing/>} />
+        
           
           
           {/* <Route path="/about" element={<div>About Us Page</div>} />

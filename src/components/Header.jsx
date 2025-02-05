@@ -1,80 +1,100 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
+import AuthModal from './Login';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faHeart, faShoppingBag, faBars, faUser } from '@fortawesome/free-solid-svg-icons';
 import "../styles/style.css";
-
 
 function Header() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [modal, setModal] = useState(false);
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
-  useEffect(() => {
-    // Get the elements after the component mounts
-    const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('nav-links');
 
-    // Ensure the elements exist
-    if (menuToggle && navLinks) {
-      // Add an event listener to the toggle button
-      menuToggle.addEventListener('click', function() {
-        navLinks.classList.toggle('active');
-      });
-
-       // Clean up the event listener on unmount
-       return () => {
-        menuToggle.removeEventListener('click', function() {
-          navLinks.classList.toggle('active');
-        });
-      };
-    }
-  }, []); // Empty dependency array ensures this runs only once
-
+  {/* hook */}
+  const handleAuthModal = () => {
+    setModal(prev => !prev);
+    document.body.classList.toggle('modal-open', !modal);
+  };
 
   return (
-    <section className="header-section">
-      <header className="header">
+    <header className="site-header">
+      
+      {modal && <AuthModal handleClose={handleAuthModal} />}
+      
+      <div className="container">
         <div className="header-top">
           <div className="logo">
-            <h1>Botiga</h1>
+            <Link to="/">Botiga</Link>
           </div>
-          <div className="search-bar">
-            <input type="text" placeholder="Search for products..." />
-            <button>Search</button>
+          
+          <div className="header-actions">
+            <div className="header-search">
+              <form action="/search" method="get">
+                <input type="text" placeholder="Search products..." />
+                <button type="submit">
+                  <FontAwesomeIcon icon={faSearch} />
+                </button>
+              </form>
+            </div>
+
+            <div className="header-icons">
+              <FontAwesomeIcon 
+                className="login-icon" 
+                icon={faUser} 
+                onClick={handleAuthModal} 
+              />
+              <Link to="/wishlist" className="wishlist-icon">
+                <FontAwesomeIcon icon={faHeart} />
+                <span className="count">0</span>
+              </Link>
+              <Link to="/cart" className="cart-icon">
+                <FontAwesomeIcon icon={faShoppingBag} />
+                <span className="count">0</span>
+              </Link>
+            </div>
+
+            <button 
+              className="mobile-menu-toggle" 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <FontAwesomeIcon icon={faBars} />
+            </button>
           </div>
         </div>
+
         
         <div className="header-main">
-        <div className="dropdown-container">
+          <div className="dropdown-container">
             <button className="dropdown-btn" onClick={toggleDropdown}>
               Trending Categories ▼
             </button>
-              <ul className={dropdownOpen ? "dropdown-menu show" : "dropdown-menu"} onClick={(e) => e.stopPropagation()}>
-                <li><Link to="">Electronics</Link></li>
-                <li><Link to="">Clothing</Link></li>
-                <li><Link to="">Accessories</Link></li>
-                <li><Link to="">Furniture</Link></li>
-              </ul>
+            <ul className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
+              <li><Link to="/electronics">Electronics</Link></li>
+              <li><Link to="/clothing">Clothing</Link></li>
+              <li><Link to="/accessories">Accessories</Link></li>
+              <li><Link to="/furniture">Furniture</Link></li>
+            </ul>
           </div>
 
-          {/* Navigation Links */}
-          <nav className="navbar">
-            <ul className="nav-links">
+          <nav className="desktop-nav">
+            <ul>
               <li><Link to="/">Home</Link></li>
               <li><Link to="/shop">Shop</Link></li>
-              <li><Link to="/vendors">Vendors</Link></li>
+              <li><Link to="/store">Vendors</Link></li>
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
           </nav>
 
-          {/* Phone number section */}
           <div className="phone-number">
             <span>📞 800-123-4567</span>
           </div>
         </div>
-      </header>
-    </section>
+      </div>
+    </header>
   );
 }
 
