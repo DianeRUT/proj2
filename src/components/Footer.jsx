@@ -1,60 +1,115 @@
-import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { SiVisa, SiMastercard, SiPaypal, SiAmericanexpress } from 'react-icons/si';
-import '../styles/style.css';
+import React, { useState } from 'react';
+import paymentMethods from '../assets/payment1.webp';
+import '../styles/Footer.css';
 
 const Footer = () => {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add newsletter subscription logic
+    setEmail('');
+  };
+
   return (
     <footer className="footer">
       <div className="footer-top">
-        <div className="container">
-          <div className="footer-widgets">
-            <div className="widget about-widget">
-              <h4>About Us</h4>
-              <p>We are a multi-vendor marketplace providing the best products from various vendors.</p>
+        <div className="footer-container">
+          {/* Left Side */}
+          <div className="footer-main-column">
+          <div className="newsletter-section">
+  <h3>Stay up to date</h3>
+  <p className="newsletter-description">
+    Subscribe to our newsletter and get 30% discount offer in your first order.
+  </p>
+  <form className="newsletter-form" onSubmit={handleSubmit}>
+    <div className="email-input-wrapper">
+      <input
+        type="email"
+        placeholder="Enter your email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        className="line-input"
+        required
+      />
+      <button type="send" className="submit-line">
+       Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+            <div className="footer-columns">
+              <div className="footer-col">
+                <h4>SHOP</h4>
+                <ul>
+                  <li>Body Lotion</li>
+                  <li>Computer Gadget</li>
+                  <li>Camera</li>
+                  <li>Electronics</li>
+                  <li>Sports</li>
+                  <li>Watch</li>
+                </ul>
+              </div>
+
+              <div className="footer-col">
+                <h4>COMPANY</h4>
+                <ul>
+                  <li>About</li>
+                  <li>Who We Are</li>
+                  <li>Serieva</li>
+                  <li>Help</li>
+                  <li>Contact</li>
+                  <li>Position</li>
+                </ul>
+              </div>
+
+              <div className="footer-col">
+                <h4>ABOUT</h4>
+                <ul>
+                  <li>General</li>
+                  <li>Shots</li>
+                  <li>Contact</li>
+                  <li>Woman Carless</li>
+                </ul>
+              </div>
             </div>
-            <div className="widget links-widget">
-              <h4>Quick Links</h4>
-              <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
+          </div>
+
+          {/* Right Side */}
+          <div className="footer-side-column">
+            <div className="help-section">
+              <h3>Happy to help</h3>
+              <div className="contact-info">
+                <p>1279 Thom Street, NY</p>
+                <p>Phone: 327-549-3480</p>
+                <p>Mail: dsmc@gmail.com</p>
+              </div>
+              <div className="social-links">
+                <a href="#"><i className="fab fa-facebook"></i></a>
+                <a href="#"><i className="fab fa-twitter"></i></a>
+                <a href="#"><i className="fab fa-instagram"></i></a>
+                <a href="#"><i className="fab fa-youtube"></i></a>
+              </div>
             </div>
-            <div className="widget contact-widget">
-              <h4>Contact Us</h4>
-              <p>123 Market Street, NY</p>
-              <p>Email: info@marketplace.com</p>
-              <p>Phone: (123) 456-7890</p>
-            </div>
-            <div className="widget newsletter-widget">
-              <h4>Newsletter</h4>
-              <p>Subscribe to our newsletter to get the latest updates.</p>
-              <form className="newsletter-form">
-                <input type="email" placeholder="Your email address" />
-                <button type="submit">Subscribe</button>
-              </form>
-            </div>
+
+            <div className="accept-for-section">
+  <h4>ACCEPT FOR</h4>
+  <div className="payment-methods-image">
+    <img 
+      src={paymentMethods} 
+      className="payment-image" 
+    />
+  </div>
+</div>
+ 
           </div>
         </div>
       </div>
+
       <div className="footer-bottom">
-        <div className="container">
-          <div className="footer-bottom-content">
-            <div className="social-icons">
-              <a href="#"><FaFacebookF /></a>
-              <a href="#"><FaTwitter /></a>
-              <a href="#"><FaInstagram /></a>
-              <a href="#"><FaLinkedinIn /></a>
-            </div>
-            <div className="payment-icons">
-              <SiVisa />
-              <SiMastercard />
-              <SiPaypal />
-              <SiAmericanexpress />
-            </div>
-          </div>
+        <div className="footer-container">
+          <p>© 2023 SURFIT. All rights reserved.</p>
         </div>
       </div>
     </footer>

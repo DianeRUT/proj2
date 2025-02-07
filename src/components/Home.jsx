@@ -2,8 +2,8 @@ import React from 'react';
 
 // import Categories from './Categories';
 // import FeaturedProducts from './FeaturedProducts';
-import Content from './Content';
-import MainSection from './MainContent';
+import CategorySection from './CategorySection';
+import ProductSection from './ProductSection';
 
 
 function Home() {
@@ -12,8 +12,8 @@ function Home() {
  
       {/* <Categories />
       <FeaturedProducts /> */}
-      <Content />
-      <MainSection />
+      <CategorySection />
+      <ProductSection />
     
     </div>
   );

@@ -5,7 +5,7 @@ import bottle from "../assets/product-water-bottle-420x420.jpg.webp";
 import alexa from "../assets/product-alexa-420x420.jpg.webp";
 import headset from "../assets/product-wireless-headset-420x420.jpg.webp";
 import watch from "../assets/product-watch-2-420x420.jpg.webp";
-import camera from "../assets/camera.webp";
+import camera from "../assets/camera1.webp";
 import mouse from "../assets/product-category-3.jpg.webp";
 
 // ⭐⭐⭐⭐⭐ Star Rating Component

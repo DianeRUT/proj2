@@ -32,8 +32,6 @@ const AuthModal = ({ handleClose }) => {
     <div className="botiga-login-container-1" onClick={handleClose}>
       <div className="botiga-login-content" onClick={(e) => e.stopPropagation()}>
         <h2 className="botiga-login-title">{isLogin ? 'Login' : 'Register'}</h2>
-        
-        {/* close button */}
         <IoClose 
           onClick={handleClose} 
           className="iconhead"

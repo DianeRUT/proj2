@@ -3,8 +3,8 @@ import {Outlet} from "react-router-dom";
 import Header from './Header';
 // import Categories from './Categories';
 // import FeaturedProducts from './FeaturedProducts';
-import Content from './Content';
-import MainSection from './MainContent';
+import CategorySection from './CategorySection';
+import ProductSection from './ProductSection';
 import Footer from './Footer';
 
 
