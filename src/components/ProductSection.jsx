@@ -3,6 +3,7 @@ import {GoArrowSwitch} from "react-icons/go";
 import { FaStar, FaRegStar, FaShippingFast, FaStoreAlt } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import "../styles/ProductSection.css";
+
 import ProductCard from "./ProductCard";
 import bottle from "../assets/product-water-bottle-420x420.jpg.webp";
 import alexa from "../assets/product-alexa-420x420.jpg.webp";
@@ -30,8 +31,8 @@ import instagram6 from "../assets/insta6.webp";
 
   const ProductSection = () => {
     const categories = [
-      { name: "Body Lotion", image: lotion },
-      { name: "Sports", image: sports },
+      {id:1, name: "Body Lotion", image: lotion },
+      { id:2, name: "Sports", image: sports },
       { name: "Computer Gadget", image: computer },
       { name: "Electronics", image: electronics },
       { name: "Watch", image: watch },

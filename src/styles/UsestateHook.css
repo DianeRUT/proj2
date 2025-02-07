@@ -74,11 +74,11 @@
   user-select: none;
 }
 
-.remember-me {
+/* .remember-me {
   display: flex;
   align-items: center;
   margin: 1rem 0;
-}
+} */
 
 .remember-me input {
   margin: 0;
@@ -190,12 +190,12 @@
   color: #666;
 }
 
-.remember-me {
+/* .remember-me {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin: 1rem 0;
-}
+} */
 
 button[type="submit"] {
   background:rgb(0, 140, 255);

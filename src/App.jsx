@@ -6,7 +6,10 @@ import ShopPage from "./components/Shop";
 import Layout from "./components/Layout";
 import StoreListing from "./components/Store";
 import UsestateHook from "./components/Login";
-
+import ProductSection from "./components/ProductSection";
+import ProductDetailPage from "./components/ProductDetailsPage";
+import ContactUs from "./components/Contact";
+import BlogGrid from "./components/Blog";
 // import Content from "./components/Content";
 // import MainSection from "./components/MainContent";
 
@@ -21,7 +24,10 @@ function App() {
 
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/store" element={<StoreListing/>} />
-          
+          <Route path="/Contact" element={<ContactUs/>} />
+          <Route path="/Blog" element={<BlogGrid/>} />
+          <Route path="/" element={<ProductSection />} />
+        <Route path="/product/:productId" element={<ProductDetailPage />} />
           
           
           {/* <Route path="/about" element={<div>About Us Page</div>} />
