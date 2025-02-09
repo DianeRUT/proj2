@@ -86,12 +86,12 @@ function Header() {
               <li><Link to="/store">Vendors</Link></li>
               <li><Link to="/Blog">Blog</Link></li>
               <li><Link to="/Contact">Contact</Link></li>
-              <li><Link to="/view">View</Link></li>
+             
             </ul>
           </nav>
 
           <div className="phone-number">
-            <span>📞 800-123-4567</span>
+            <span className="blue-phone">📞 800-123-4567</span>
           </div>
         </div>
       </div>

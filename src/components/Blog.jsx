@@ -58,7 +58,7 @@ const blogPosts = [
 export default function BlogGrid() {
     return (
         <div>
-            <h1>Blog</h1>
+            <h1 className="bloga-h">Blog</h1>
         <div className="blog-container">
             {blogPosts.map((post) => (
                 <div className="blog-card" key={post.id}>

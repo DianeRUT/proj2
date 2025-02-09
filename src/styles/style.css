@@ -161,6 +161,12 @@
   color: #333 !important; /* Dark text for yellow background */
 }
 
+.blue-phone {
+  color: blue;
+  font-size: 18px; 
+  font-weight: bold; 
+}
+
 .dropdown-menu {
   position: absolute;
   top: 100%;
@@ -277,6 +283,8 @@ ul {
   display: flex;
   gap: 20px;
   padding: 20px;
+  margin-top:90px;
+  margin-bottom:150px;
 }
 
 /* Sidebar */
@@ -585,190 +593,11 @@ ul {
 
 
 /* Main Container */
-.botiga-stores-page {
+/* .botiga-stores-page {
   font-family: 'Inter', sans-serif;
   color: #2d2d2d;
-}
+} */
 
-/* Hero Section */
-.store-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-              url('https://demo.athemes.com/botiga-multi-vendor-el/wp-content/uploads/sites/118/2023/03/store-hero.jpg');
-  background-size: cover;
-  background-position: center;
-  padding: 120px 0 80px;
-  text-align: center;
-}
-
-.store-hero h1 {
-  color: #fff;
-  font-size: 48px;
-  margin-bottom: 30px;
-  font-weight: 600;
-}
-
-/* Search Input */
-.search-wrapper {
-  position: relative;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.search-icon {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #666;
-  font-size: 18px;
-}
-
-.search-input {
-  width: 100%;
-  padding: 16px 20px 16px 50px;
-  border: none;
-  border-radius: 30px;
-  font-size: 16px;
-}
-
-/* Categories Filter */
-.store-categories {
-  background: #f8f8f8;
-  padding: 20px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.categories-wrapper {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  padding-bottom: 5px;
-}
-
-.category-btn {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 25px;
-  padding: 8px 20px;
-  font-size: 14px;
-  white-space: nowrap;
-  transition: all 0.3s ease;
-}
-
-.category-btn.active {
-  background: #2250f4;
-  border-color: #2250f4;
-  color: #fff;
-}
-
-/* Stores Grid */
-.stores-grid-wrapper {
-  padding: 50px 0;
-}
-
-.stores-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.store-card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.store-card:hover {
-  transform: translateY(-5px);
-}
-
-.store-thumbnail {
-  height: 250px;
-  overflow: hidden;
-}
-
-.store-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.store-info {
-  padding: 20px;
-}
-
-.store-title {
-  font-size: 20px;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-
-.store-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.store-rating {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  color: #ffb300;
-}
-
-.rating-number {
-  font-weight: 500;
-}
-
-.product-count {
-  color: #666;
-  font-size: 14px;
-}
-
-.store-link {
-  display: block;
-  color: #2250f4;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.store-link:hover {
-  color: #1a40c2;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .stores-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 767px) {
-  .store-hero {
-    padding: 80px 0 50px;
-  }
-  
-  .store-hero h1 {
-    font-size: 36px;
-  }
-  
-  .stores-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .search-input {
-    padding: 12px 15px 12px 40px;
-  }
-  
-  .search-icon {
-    left: 15px;
-    font-size: 16px;
-  }
-}
 
 
 /* Content */
