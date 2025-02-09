@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import "../Styles/storeListing.css";
+import "../styles/storeListing.css";
 import store1 from "../assets/store1.webp";
 import store2 from "../assets/store2.webp";
 import store3 from "../assets/store3.webp";
