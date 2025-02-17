@@ -85,8 +85,10 @@ function Header() {
               <li><Link to="/shop">Shop</Link></li>
               <li><Link to="/store">Vendors</Link></li>
               <li><Link to="/Blog">Blog</Link></li>
+              <li><Link to="/onSubmit">submit</Link></li>
               <li><Link to="/Contact">Contact</Link></li>
-             
+              {/* <li><Link to="/dashboard">Contact</Link></li>
+              <li><Link to="/Contact">Contact</Link></li> */}
             </ul>
           </nav>
 

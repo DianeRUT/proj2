@@ -86,8 +86,8 @@ import instagram6 from "../assets/insta6.webp";
 
     <div className="explore-products">
       <h2 className="section-title">Popular Categories</h2>
-      <div className="cards-grid">
-        {categories.map((category, index) => (
+      <div className="cards-grid1">
+        {categories.map((category, index) => (     
           <div className="card" key={index}>
             <img src={category.image} alt={category.name} className="category-image" />
             <p>{category.name}</p>

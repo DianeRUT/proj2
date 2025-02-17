@@ -1,0 +1,21 @@
+.store-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .store-table th, .store-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .store-table th {
+    background-color: #f1f5ff;
+    color: #0046d5;
+  }
+  
+  .store-table tr:hover {
+    background-color:#f1f5ff;
+  }
+  

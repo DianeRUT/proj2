@@ -1,0 +1,138 @@
+body.dark-theme .widget,
+body.dark-theme .chart {
+  background-color: #181818;
+  color: white;
+  box-shadow: 0 0 5px rgb(80, 80, 80);
+}
+
+body.dark-theme .widget h2 {
+  color: white;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border-bottom: 1px solid #e0e0e0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Dark Mode */
+.dark .navbar {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.dark .search-bar input {
+  background-color: #333;
+  color: white;
+}
+
+.dark .search-icon {
+  color: white;
+}
+.dark .nav-icon {
+  color: white;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.sun-icon {
+  color: yellow;
+}
+
+.moon-icon {
+  color: white;
+}
+
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    /* background-color: #f1f1f1; */
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+  
+  .search-icon {
+    margin-right: 5px;
+    color: #888;
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-icon {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  /* Hide some elements on mobile */
+@media (max-width: 768px) {
+  .search-bar {
+    display: none; /* Hide search bar on smaller screens */
+  }
+
+  .navbar-right .nav-icon {
+    font-size: 1rem;
+    margin: 0 5px;
+  }
+  .navbar-right {
+    gap: 5px; /* Reduce spacing */
+  }
+
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+  }
+}

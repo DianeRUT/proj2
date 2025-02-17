@@ -18,7 +18,7 @@
     margin-bottom: 40px;
   }
   
-  .cards-grid, .products-grid {
+  .cards-grid1, .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
    

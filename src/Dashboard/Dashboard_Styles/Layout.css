@@ -1,0 +1,48 @@
+.dashboard-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+  }
+  
+  .dashboard-main {
+    display: flex;
+    flex: 1;
+    margin-top: 60px;
+    transition: margin-left 0.3s ease;
+    /* width: 100%; */
+  }
+  
+  .sidebar {
+    transition: width 0.3s ease;
+  }
+  
+  .sidebar.collapsed {
+    width: 60px; /* Adjust based on your design */
+   display: none;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    margin-left: 250px;
+    transition: margin-left 0.3s ease-in-out;
+    margin-left: 250px;
+    overflow-x: hidden;
+  }
+  
+  .content.collapsed {
+    margin-left: 60px; /* Match collapsed sidebar width */
+  }
+  .sidebar.collapsed + .content {
+    margin-left: 60px;
+  }
+  
+  /* Mobile View - Sidebar Hidden */
+/* 📌 Mobile Fixes */
+@media (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    width: 100%;
+  }
+}

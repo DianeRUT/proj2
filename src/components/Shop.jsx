@@ -85,7 +85,7 @@ const ShopPage = () => {
 
       <main className="shop-main">
         {/* Sidebar */}
-        <aside className="sidebar">
+        <aside className="sidebar1">
           <h3>Categories</h3>
           <ul>
             <li>Body Lotion (1)</li>

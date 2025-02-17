@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/UsestateHook.css';
 import { IoClose } from "react-icons/io5";
 
@@ -11,6 +11,15 @@ const AuthModal = ({ handleClose }) => {
     password: '',
     confirmPassword: ''
   });
+
+  // Clear password fields when toggling between login and register
+  useEffect(() => {
+    setFormData((prev) => ({
+      ...prev,
+      password: '',
+      confirmPassword: ''
+    }));
+  }, [isLogin]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
