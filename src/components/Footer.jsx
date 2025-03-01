@@ -32,7 +32,7 @@ const Footer = () => {
         className="line-input"
         required
       />
-      <button type="send" className="submit-line">
+      <button type="submitline" className="submit-line">
        Submit
       </button>
     </div>

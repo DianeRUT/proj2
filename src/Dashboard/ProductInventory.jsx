@@ -137,10 +137,10 @@ const ProductInventory = () => {
         <input type="number" name="price" placeholder="Price" value={newProduct.price} onChange={handleInputChange} />
         <input type="number" name="stock" placeholder="Stock" value={newProduct.stock} onChange={handleInputChange} />
         
-        <button onClick={editingProduct ? handleUpdateProduct : handleAddProduct}>
+        <buttons_1 onClick={editingProduct ? handleUpdateProduct : handleAddProduct}>
           {editingProduct ? "Update Product" : "Add Product"}
-        </button>
-        {editingProduct && <button onClick={handleCancelEdit}>Cancel</button>}
+        </buttons_1>
+        {editingProduct && <buttons1 onClick={handleCancelEdit}>Cancel</buttons1>}
       </div>
 
       {/* Product Table */}
@@ -164,13 +164,13 @@ const ProductInventory = () => {
               </td>
               <td>{product.name}</td>
               <td>
-                <img src={product.image} alt={product.name} className="product-image" />
+                <img src={product.image} alt={product.name} className="product-images" />
               </td>
               <td>{product.description}</td>
               <td>${parseFloat(product.price.replace('$', '')).toFixed(2)}</td>
               <td>{product.stock}</td>
               <td>
-                <button onClick={() => handleEditProduct(product)}>Edit</button>
+                <buttons1 onClick={() => handleEditProduct(product)}>Edit</buttons1>
               </td>
             </tr>
           ))}

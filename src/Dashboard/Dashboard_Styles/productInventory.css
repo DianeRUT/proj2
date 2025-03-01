@@ -165,7 +165,7 @@ h3 {
 }
 
 /* Image Styling */
-.product-image {
+.product-images {
   width: 50px;
   height: 50px;
   border-radius: 4px;
@@ -174,12 +174,12 @@ h3 {
   transition: transform 0.3s ease;
 }
 
-.product-image:hover {
+.product-images:hover {
   transform: scale(1.1);
 }
 
 /* Button Styling */
-button {
+/* button {
   background-color: #28a745;
   color: white;
   border: none;
@@ -198,7 +198,7 @@ button:hover {
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
-}
+} */
 
 /* Checkbox Styling */
 .product-checkbox {
@@ -228,7 +228,7 @@ button:disabled {
     font-size: 12px;
   }
 
-  .product-image {
+  .product-images {
     width: 40px;
     height: 40px;
   }

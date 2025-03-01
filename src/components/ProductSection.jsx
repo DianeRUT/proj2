@@ -107,9 +107,9 @@ import instagram6 from "../assets/insta6.webp";
         <h2 className="section-title">Our Vendor List</h2>
         <div className="vendors-grid">
           {vendors.map((vendor, index) => (
-            <div className="vendor-card" key={index}>
+            <div className="vendor-cards1" key={index}>
               <img src={vendor.image} alt={vendor.name} />
-              <p>{vendor.name} <button className="vendor-button">&gt;</button></p>
+              <p>{vendor.name} <button className="vendor-buttons1">&gt;</button></p>
               
               <span>{vendor.location}</span>
               
